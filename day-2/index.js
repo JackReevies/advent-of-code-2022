@@ -1,4 +1,4 @@
-const { timeFunction, getInput } = require('../common')
+const { timeFunction, getInput, getInputAsString } = require('../common')
 
 function partOne(pairs) {
   let score = 0
@@ -44,11 +44,61 @@ function partTwo(pairs) {
   return score
 }
 
-async function start() {
-  const lines = getInput(`${__dirname}/input.txt`)
+function betterP1(lines) {
+  let score = 0
+  for (const line of lines) {
+    const p1 = Number(line[0])
+    const p2 = Number(line[2])
 
-  const task1 = await timeFunction(() => partOne(lines))
-  const task2 = await timeFunction(() => partTwo(lines))
+    score += p2
+    score += p1 === p2 ? 3 : (p1 === 1 && p2 === 3 || p1 === 2 && p2 === 1 || p1 === 3 && p2 === 2) ? 0 : 6
+  }
+
+  return score
+}
+
+function betterP2(lines) {
+  const win = (op) => op === 1 ? 2 : op === 2 ? 3 : 1
+  const lose = (op) => op === 1 ? 3 : op === 2 ? 1 : 2
+
+  let score = 0
+  for (const line of lines) {
+    const p1 = Number(line[0])
+    const res = Number(line[2])
+    const p2 = res === 2 ? p1 : res === 3 ? win(p1) : lose(p1)
+
+    score += p2
+    score += (res - 1) * 3
+  }
+
+  return score
+}
+
+const lose = (num) => num - 1 || 3
+const win = (num) => num === 3 ? 1 : num + 1
+
+function evenBetterP1(lines) {
+  return lines.reduce((acc, line) => {
+    const p1 = Number(line[0])
+    const p2 = Number(line[2])
+    return acc + p2 + (lose(p1) === p2 ? 0 : p1 === p2 ? 3 : 6)
+  }, 0)
+}
+
+function evenBetterP2(lines) {
+  return lines.reduce((acc, line) => {
+    const p1 = Number(line[0])
+    const res = Number(line[2])
+    const p2 = res === 2 ? p1 : res === 3 ? win(p1) : lose(p1)
+    return acc + p2 + (res - 1) * 3
+  }, 0)
+}
+
+async function start() {
+  const lines = getInputAsString(`${__dirname}/input.txt`).replace(/A|X/g, 1).replace(/B|Y/g, 2).replace(/C|Z/g, 3).split(/\n|\r\n/)
+
+  const task1 = await timeFunction(() => evenBetterP1(lines))
+  const task2 = await timeFunction(() => evenBetterP2(lines))
   return [{ ans: task1.result, ms: task1.ms }, { ans: task2.result, ms: task2.ms }]
 }
 

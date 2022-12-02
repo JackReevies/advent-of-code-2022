@@ -6,7 +6,7 @@ const fs = require('fs')
  * @param {*} fn A function (a/sync) to time
  * @returns {{result: object, ms: number}} An object representing the return/resolve value from the function and execution time in ms
  */
-module.exports.timeFunction = function timeFunction (fn) {
+module.exports.timeFunction = function timeFunction(fn) {
   return new Promise((resolve, reject) => {
     const start = Date.now()
     const result = fn()
@@ -25,7 +25,7 @@ module.exports.timeFunction = function timeFunction (fn) {
 /**
  * Read in file and return an array representing content split by new line
  */
-module.exports.getInput = function getInput (location) {
+module.exports.getInput = function getInput(location) {
   const expenses = fs.readFileSync(location).toString()
   const split = expenses.split('\r\n')
   if (split.length === 1) {
@@ -33,4 +33,11 @@ module.exports.getInput = function getInput (location) {
     return expenses.split('\n')
   }
   return split
+}
+
+/**
+ * Read in file and return as a string
+ */
+module.exports.getInputAsString = function getInputAsString(location) {
+  return fs.readFileSync(location).toString()
 }
