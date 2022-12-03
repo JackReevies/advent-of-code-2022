@@ -1,4 +1,5 @@
 const fs = require('fs')
+const { hrtime } = require('process')
 
 /**
  * Times how long a function takes to execute.
@@ -8,16 +9,16 @@ const fs = require('fs')
  */
 module.exports.timeFunction = function timeFunction(fn) {
   return new Promise((resolve, reject) => {
-    const start = Date.now()
+    const start = Number(hrtime.bigint())
     const result = fn()
     if (result instanceof Promise) {
       result.then(result => {
-        resolve({ result, ms: Date.now() - start })
+        resolve({ result, ms: (Number(hrtime.bigint()) - start) / 1000000 })
       }).catch(e => {
         reject(e)
       })
     } else {
-      resolve({ result, ms: Date.now() - start })
+      resolve({ result, ms: (Number(hrtime.bigint()) - start) / 1000000 })
     }
   })
 }
