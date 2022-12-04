@@ -1,6 +1,7 @@
 const fs = require('fs')
 const { sep } = require('path')
 const { timeFunction } = require('./common')
+const { convert } = require('./html2md')
 
 const fns = []
 const answers = [[69289, 205615], [14297, 10498], [7763, 2569], [588, 911]]
@@ -72,6 +73,7 @@ async function setupDay(day) {
   }, {})
 
   console.log(`Setting up project for day ${day}`)
+  const dayDir = `day-${day}`
 
   const input = await fetch(`https://adventofcode.com/2022/day/${day}/input`, { headers: { 'Cookie': `session=${dotEnv.session}` } })
   const text = await input.text()
@@ -80,17 +82,25 @@ async function setupDay(day) {
     throw new Error(`Looks like this day is not available yet`)
   }
 
-  const dayDir = `day-${day}`
-
   if (!fs.existsSync(dayDir)) {
     fs.mkdirSync(dayDir)
+  }
+
+  if (!fs.existsSync(`${dayDir}${sep}readme.md`)) {
+    const desc = await fetch(`https://adventofcode.com/2022/day/${day}`, { headers: { 'Cookie': `session=${dotEnv.session}` } })
+    const descText = await desc.text()
+    const markdown = convert(descText)
+  
+    fs.writeFileSync(`${dayDir}${sep}readme.md`, markdown)
   }
 
   if (!fs.existsSync(`${dayDir}${sep}index.js`)) {
     fs.copyFileSync(`day-x/index.js`, `${dayDir}${sep}index.js`)
   }
 
-  fs.writeFileSync(`day-${day}/input.txt`, text)
+  if (!fs.existsSync(`day-${day}${sep}input.txt`)) {
+    fs.writeFileSync(`day-${day}${sep}input.txt`, text.endsWith("\n") ? text.substring(0, text.length - 1) : text)
+  }
 
   console.log(`Finished setup for day ${day}`)
 }
