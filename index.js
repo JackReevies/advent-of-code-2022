@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 const fns = []
-const answers = [[69289, 205615], [14297, 10498], [7763, 2569]]
+const answers = [[69289, 205615], [14297, 10498], [7763, 2569], [588, 911]]
 
 function discoverDays() {
   for (let i = 1; i < 26; i++) {

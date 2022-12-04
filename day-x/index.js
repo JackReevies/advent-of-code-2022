@@ -1,15 +1,9 @@
 const { timeFunction, getInput } = require('../common')
 
-function getElves(numbers) {
-
+function partOne(numbers) {
 }
 
-
-function partOne(elves) {
-  return Math.max(...elves)
-}
-
-function partTwo(elves) {
+function partTwo(numbers) {
 
 }
 
