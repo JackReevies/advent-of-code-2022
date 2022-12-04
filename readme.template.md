@@ -9,7 +9,7 @@ My solutions to the [advent of code 2022](https://adventofcode.com/2022/)
 Day | Task 1 | ᴍs | Task 2 | ᴍs | Total Execution Time (ᴍs)
 -|-|-|-|-|-
 %ROWS%
-<br>
+<br />
 ## How to Run
 
 The goal is to not use any external modules, only those built in to the [node runtime](https://nodejs.org/en/) (this means no package.json). Node v12 and above should work for the puzzles (`node index`), but v18 is required for `node index download day` for the newly supported fetch API
