@@ -121,7 +121,7 @@ function betterP2(lines) {
 }
 
 async function start() {
-  const numbers = getInput(`${__dirname}/input.txt`)
+  const numbers = getInput(`${__dirname}/input.txt`).filter(o => o)
 
   const task1 = await timeFunction(() => betterP1(numbers))
   const task2 = await timeFunction(() => betterP2(numbers))
