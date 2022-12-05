@@ -4,7 +4,7 @@ const { timeFunction } = require('./common')
 const { convert } = require('./html2md')
 
 const fns = []
-const answers = [[69289, 205615], [14297, 10498], [7763, 2569], [588, 911]]
+const answers = [[69289, 205615], [14297, 10498], [7763, 2569], [588, 911], ['FZCMJCRHZ', 'JSDHQMZGF']]
 
 function discoverDays() {
   for (let i = 1; i < 26; i++) {
