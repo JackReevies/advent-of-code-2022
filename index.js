@@ -4,7 +4,11 @@ const { timeFunction } = require('./common')
 const { convert } = require('./html2md')
 
 const fns = []
-const answers = [[69289, 205615], [14297, 10498], [7763, 2569], [588, 911], ['FZCMJCRHZ', 'JSDHQMZGF'], [1816, 2625], [1206825, 9608311], [1829, 291840]]
+const answers = [
+  [69289, 205615], [14297, 10498], [7763, 2569], [588, 911],
+  ['FZCMJCRHZ', 'JSDHQMZGF'], [1816, 2625], [1206825, 9608311], [1829, 291840],
+  [6098, 2597], [14820, '']
+]
 
 function discoverDays() {
   for (let i = 1; i < 26; i++) {
@@ -90,7 +94,7 @@ async function setupDay(day) {
     const desc = await fetch(`https://adventofcode.com/2022/day/${day}`, { headers: { 'Cookie': `session=${dotEnv.session}` } })
     const descText = await desc.text()
     const markdown = convert(descText)
-  
+
     fs.writeFileSync(`${dayDir}${sep}readme.md`, markdown)
   }
 
