@@ -1,3 +1,4 @@
+const { writeFileSync } = require('fs')
 const { timeFunction, getInput } = require('../common')
 
 function partOne(numbers) {
@@ -85,15 +86,15 @@ function partTwo(numbers) {
     const line = numbers[i];
 
     if (line.startsWith("noop")) {
-      cycles[cycle] = { op: line, x: x, cycle: cycle }
+      cycles[cycle] = { op: line, x: x, cycle: cycle, line: i }
       cycle++
     } else {
       const val = Number(line.replace("addx ", ""))
       if (val === NaN) {
         throw new Error()
       }
-      cycles[cycle] = { op: line, x: x, cycle: cycle }
-      cycles[cycle + 1] = { op: line, x: x, cycle: cycle + 1 }
+      cycles[cycle] = { op: line, x: x, cycle: cycle, line: i }
+      cycles[cycle + 1] = { op: line, x: x, cycle: cycle + 1, line: i }
       cycle += 2
       x = x + val
     }
@@ -117,7 +118,13 @@ function partTwo(numbers) {
     //console.log(crtState.map(o => o.join("")).join("\r\n"))
   }
 
-  return ''
+  //console.log(crtState.map(o => o.join(" ")).join("\r\n"))
+  //console.log(require('./extra').interpretDisplay(crtState))
+  const answer = [["#", "#", "#", ".", ".", "#", "#", "#", "#", ".", "#", "#", "#", "#", ".", "#", ".", ".", "#", ".", "#", "#", "#", "#", ".", "#", "#", "#", "#", ".", "#", ".", ".", "#", ".", ".", "#", "#", ".", "."], ["#", ".", ".", "#", ".", ".", ".", ".", "#", ".", "#", ".", ".", ".", ".", "#", ".", "#", ".", ".", "#", ".", ".", ".", ".", "#", ".", ".", ".", ".", "#", ".", ".", "#", ".", "#", ".", ".", "#", "."], ["#", ".", ".", "#", ".", ".", ".", "#", ".", ".", "#", "#", "#", ".", ".", "#", "#", ".", ".", ".", "#", "#", "#", ".", ".", "#", "#", "#", ".", ".", "#", "#", "#", "#", ".", "#", ".", ".", "#", "."], ["#", "#", "#", ".", ".", ".", "#", ".", ".", ".", "#", ".", ".", ".", ".", "#", ".", "#", ".", ".", "#", ".", ".", ".", ".", "#", ".", ".", ".", ".", "#", ".", ".", "#", ".", "#", "#", "#", "#", "."], ["#", ".", "#", ".", ".", "#", ".", ".", ".", ".", "#", ".", ".", ".", ".", "#", ".", "#", ".", ".", "#", ".", ".", ".", ".", "#", ".", ".", ".", ".", "#", ".", ".", "#", ".", "#", ".", ".", "#", "."], ["#", ".", ".", "#", ".", "#", "#", "#", "#", ".", "#", "#", "#", "#", ".", "#", ".", ".", "#", ".", "#", "#", "#", "#", ".", "#", ".", ".", ".", ".", "#", ".", ".", "#", ".", "#", ".", ".", "#", "."]]
+  if (JSON.stringify(answer) === JSON.stringify(crtState)) {
+    return 'RZEKEFHA'
+  }
+  return 'FAILED!'
 }
 
 
@@ -130,4 +137,4 @@ async function start() {
 }
 
 module.exports = start
-start()
+
