@@ -24,6 +24,18 @@ module.exports.timeFunction = function timeFunction(fn) {
 }
 
 /**
+ * Times how long a function takes to execute.
+ * Supports promises
+ * @param {*} fn A function (a/sync) to time
+ * @returns {{result: object, ms: number}} An object representing the return/resolve value from the function and execution time in ms
+ */
+module.exports.timeFn = function timeFn(fn) {
+  const start = Number(hrtime.bigint())
+  const result = fn()
+  return { result, ms: (Number(hrtime.bigint()) - start) / 1000000 }
+}
+
+/**
  * Read in file and return an array representing content split by new line
  */
 module.exports.getInput = function getInput(location) {

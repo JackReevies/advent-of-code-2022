@@ -1,6 +1,6 @@
 ## Advent of Code 2022
 
-![](https://img.shields.io/badge/Language-JS-778528?style=for-the-badge) &nbsp; &nbsp; ![](https://img.shields.io/badge/📅%20Day%20-10-118499?style=for-the-badge) &nbsp; &nbsp;  ![](https://img.shields.io/badge/⭐%20Stars%20-20-b5792a?style=for-the-badge)
+![](https://img.shields.io/badge/Language-JS-778528?style=for-the-badge) &nbsp; &nbsp; ![](https://img.shields.io/badge/📅%20Day%20-11-118499?style=for-the-badge) &nbsp; &nbsp;  ![](https://img.shields.io/badge/⭐%20Stars%20-22-b5792a?style=for-the-badge)
 
 My solutions to the [advent of code 2022](https://adventofcode.com/2022/)
 
@@ -8,16 +8,17 @@ My solutions to the [advent of code 2022](https://adventofcode.com/2022/)
 
 Day | Task 1 | ᴍs | Task 2 | ᴍs | Total Execution Time (ᴍs)
 -|-|-|-|-|-
-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|69289&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.03&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|205615&nbsp;&nbsp;&nbsp;&nbsp;|0.17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|244.6072
-2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|14297&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|10498&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1.286
-3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|7763&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|2569&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.29&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|2.7888
-4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|588&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.42&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|911&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.37&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1.0615
-5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|FZCMJCRHZ&nbsp;|1.01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|JSDHQMZGF&nbsp;|0.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|2.5617
-6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1816&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|2625&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.6857
-7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1206825&nbsp;&nbsp;&nbsp;|3.48&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|9608311&nbsp;&nbsp;&nbsp;|2.21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|5.9692
-8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1829&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|4.65&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|291840&nbsp;&nbsp;&nbsp;&nbsp;|4.71&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|9.9119
-9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|6098&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|9.93&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|2597&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|229.18&nbsp;&nbsp;&nbsp;&nbsp;|239.4294
-10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|14820&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|RZEKEFHA&nbsp;&nbsp;|0.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1.1137
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|69289&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.03&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|205615&nbsp;&nbsp;&nbsp;&nbsp;|0.12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1104.2103
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|14297&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|10498&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1.2303
+3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|7763&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|2569&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|2.541
+4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|588&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.39&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|911&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.38&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1.047
+5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|FZCMJCRHZ&nbsp;|1.01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|JSDHQMZGF&nbsp;|0.59&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|2.4406
+6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1816&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|2625&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.36&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.8031
+7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1206825&nbsp;&nbsp;&nbsp;|4.91&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|9608311&nbsp;&nbsp;&nbsp;|2.43&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|7.6395
+8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1829&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|4.29&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|291840&nbsp;&nbsp;&nbsp;&nbsp;|5.33&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|10.2628
+9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|6098&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|9.37&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|2597&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|211.19&nbsp;&nbsp;&nbsp;&nbsp;|220.8949
+10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|14820&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0.19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|RZEKEFHA&nbsp;&nbsp;|0.64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1.1399
+11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|113220&nbsp;&nbsp;&nbsp;&nbsp;|3.57&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|30599555965|825.05&nbsp;&nbsp;&nbsp;&nbsp;|829.3596
 
 <br />
 
